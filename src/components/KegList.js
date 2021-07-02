@@ -3,7 +3,12 @@ import Keg from "./Keg";
 
 function KegList(){
   return (
-    <Keg />
+    <Keg
+     name="Space Race"
+     brand="Hoodinville"
+     price="5"
+     alcoholContent="7"
+     pintsLeft="124" />
   );
 }
 
