@@ -17,6 +17,12 @@ class KegControl extends React.Component {
                   formVisibleOnPage: false });
   }
 
+  handleDecrementingPints = () => {
+    this.setState(
+      event.target.pints.value -= 1
+    )
+  }
+
   handleClick = () => {
     this.setState(prevState => ({
       formVisibleOnPage: !prevState.formVisibleOnPage
