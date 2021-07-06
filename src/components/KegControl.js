@@ -7,12 +7,12 @@ class KegControl extends React.Component {
     super(props);
     this.state = {
       formVisibleOnPage: false
-    };
+    }
   }
 
   handleClick = () => {
-    this.setState(prevSate => ({
-      formVisibleOnPage: !prevSate.formVisibleOnPage
+    this.setState(prevState => ({
+      formVisibleOnPage: !prevState.formVisibleOnPage
     }));
   }
 
