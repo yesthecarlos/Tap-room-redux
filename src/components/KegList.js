@@ -14,6 +14,7 @@ function KegList(props){
         pints={keg.pints}
         key={index} />
       )}
+      <button onClick={props.kegList.pints -= 1}>Sold a pint!</button>
     </React.Fragment>
   );
 }

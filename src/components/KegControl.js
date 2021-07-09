@@ -38,11 +38,14 @@ class KegControl extends React.Component {
     } else {
       currentlyVisibleState = <KegList kegList={this.state.masterKegList} />
       buttonText = "Add Keg";
+      sellPintButton = <button onClick={this.handleDecrementingPints}>Sold a pint!</button>
     }
     return (
       <React.Fragment>
         {currentlyVisibleState}
+        {sellPintButton}
         <button onClick={this.handleClick}>{buttonText}</button>
+        
       </React.Fragment>
     );
   }

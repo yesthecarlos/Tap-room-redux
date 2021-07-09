@@ -9,7 +9,7 @@ function Keg(props) {
       <h4>{props.alcohol}% abv</h4>
       <h3>${props.price} </h3>
       <h3>{props.pints} pints left</h3> 
-      <button onClick={this.handleDecrementingPints}>"Sold a pint!"</button>
+      {/* <button onClick={props.kegList.pints -= 1}>"Sold a pint!"</button> */}
       <hr/>
     </React.Fragment>
   );
