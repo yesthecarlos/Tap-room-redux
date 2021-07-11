@@ -24,4 +24,12 @@ Keg.propTypes = {
   decrementClick: PropTypes.func,
 }
 
+function decrementClick(props) {
+  if (props.pints >= 1) {
+    props.pints = props.pints - 1
+  } else {
+    return props.pints
+  }
+}
+
 export default Keg;
