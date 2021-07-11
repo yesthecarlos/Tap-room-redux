@@ -17,11 +17,17 @@ class KegControl extends React.Component {
                   formVisibleOnPage: false });
   }
 
-  handleDecrementingPints = () => {
-    this.setState(prevState => ({ 
-      pints: this.state.pints - 1
-    }));
-  }
+  // handleDecrementingPints = () => {
+  //   this.setState(prevState => ({ 
+  //     pints: this.state.pints - 1
+  //   }));
+  // }
+
+//  ButtonDecrement(props) {
+//     return (
+//       <button onClick={props.onClickFunc}>Sold anotha one!</button>
+//     )
+//   }
 
   handleClick = () => {
     this.setState(prevState => ({
@@ -32,21 +38,20 @@ class KegControl extends React.Component {
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
-    let sellPintButton = null;
+    // let sellPintButton = null;
     if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />;
       buttonText = "Return to Keg List";
     } else {
       currentlyVisibleState = <KegList kegList={this.state.masterKegList} />
       buttonText = "Add Keg";
-      sellPintButton = <button onClick={this.handleDecrementingPints}>Sold a pint!</button>
+      // sellPintButton = <button onClick={this.handleDecrementingPints}>Sold a pint!</button>
     }
     return (
       <React.Fragment>
         {currentlyVisibleState}
-        {sellPintButton}
+        {/* {sellPintButton} */}
         <button onClick={this.handleClick}>{buttonText}</button>
-        
       </React.Fragment>
     );
   }
