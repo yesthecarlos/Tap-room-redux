@@ -17,10 +17,10 @@ class KegControl extends React.Component {
                   formVisibleOnPage: false });
   }
 
-  handleDecrementingPints = (props) => {
-    this.setState(
-      { pints: this.state.pints - 1 }
-    )
+  handleDecrementingPints = () => {
+    this.setState(prevState => ({ 
+      pints: this.state.pints - 1
+    }));
   }
 
   handleClick = () => {
