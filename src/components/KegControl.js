@@ -17,9 +17,9 @@ class KegControl extends React.Component {
                   formVisibleOnPage: false });
   }
 
-  handleDecrementingPints = () => {
+  handleDecrementingPints = (props) => {
     this.setState(
-      event.target.pints.value -= 1
+      { pints: this.state.pints - 1 }
     )
   }
 
@@ -32,6 +32,7 @@ class KegControl extends React.Component {
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
+    let sellPintButton = null;
     if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />;
       buttonText = "Return to Keg List";
