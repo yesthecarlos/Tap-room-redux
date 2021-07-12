@@ -29,6 +29,7 @@ _This project uses npm create-react-app to bootstrap a tap room management progr
 3. Open with your preferred text editor to view the code base
 4. To run the web app:
     * Navigate to `tap-room/` in your command line
+    * Run the command `npm install` to install the required packages.
     * Run the command `npm start` to run the app in development mode.
     * Alternatively, run the commmand `npm run build` to bundle React in a minified and optimized production mode
     * Finally, open the project in your web browser, using the specified address (default is localhost:3000)
