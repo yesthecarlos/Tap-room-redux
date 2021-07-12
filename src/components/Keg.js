@@ -2,6 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function Keg(props) {
+
+  function decrementClick(props,event) {
+    event.preventDefault();
+    if (event.target.pints.value >= 1) {
+      event.target.pints = event.target.pints - 1
+    } else {
+      return props.pints
+    }
+  }
+  
   return (
     <React.Fragment>
       <h1>{props.name}</h1>
@@ -9,7 +19,7 @@ function Keg(props) {
       <h4>{props.alcohol}% abv</h4>
       <h3>${props.price} </h3>
       <h3>{props.pints} pints left</h3> 
-      <button onClick={props.decrementClick}>Sold a pint!</button>
+      <button onClick={decrementClick}>Sold a pint!</button>
       <hr/>
     </React.Fragment>
   );
@@ -24,12 +34,6 @@ Keg.propTypes = {
   decrementClick: PropTypes.func,
 }
 
-function decrementClick(props) {
-  if (props.pints >= 1) {
-    props.pints = props.pints - 1
-  } else {
-    return props.pints
-  }
-}
+
 
 export default Keg;
